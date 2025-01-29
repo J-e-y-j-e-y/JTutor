@@ -1,7 +1,11 @@
 # Default ignored folders
 /shelf/
-/out/
 
 # Default ignored files
 /workspace.xml
-*.class
+/*.class
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
