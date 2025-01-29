@@ -12,6 +12,7 @@ public class Main {
                 new AClass();
             }
 
+            // как программа видит класс Math? Мы же его нигде не импортировали.
             int randNum_B = (int)(Math.random() * 10);
             bCounter += randNum_B;
             for (int b = 0; b < randNum_B; b++) {
@@ -19,6 +20,9 @@ public class Main {
             }
         }
         System.out.println("Должно быть " + aCounter + " объектов класса AClass");
+        System.out.println("Создалось " + AClass.aCounter + " объектов класса AClass");
+
         System.out.println("Должно быть " + bCounter + " объектов класса BClass");
+        System.out.println("Создалось " + BClass.bCounter + " объектов класса BClass");
     }
 }
