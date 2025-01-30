@@ -7,6 +7,6 @@ public class Main {
         Person p2 = new Person("Алексей", 36);
 
         p1.move();
-        p2.talk(p2);
+        p2.talk();
     }
 }

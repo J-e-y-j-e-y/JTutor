@@ -7,16 +7,26 @@ public class Person {
     public Person() {
 
     }
+
     public Person(String fullName, int age) {
         this.fullName = fullName;
         this.age = age;
     }
 
-    public void move() {
-        System.out.println("Объект Person идет");
+    // Можно ли складывать число и строку без явного приведения типов?
+    @Override
+    public String toString() {
+        return "Person{" +
+                "fullName='" + fullName + '\'' +
+                ", age=" + age +
+                '}';
     }
 
-    public void talk(Person p) {
-        System.out.println(p.fullName + " говорит");
+    public void move() {
+        System.out.println(toString() + " идет");
+    }
+
+    public void talk() {
+        System.out.println(fullName + " говорит");
     }
 }
