@@ -1,4 +1,4 @@
-package main.java.homework.oop.classes_homework.equals_hashcode_homework.task_1;
+package homework.oop.classes_homework.equals_hashcode_homework.task_1;
 
 import java.util.Objects;
 
