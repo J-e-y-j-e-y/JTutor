@@ -1,4 +1,4 @@
-package main.java.homework.oop.classes_homework.task_2;
+package homework.oop.classes_homework.task_2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +18,10 @@ public class TestReader {
         Book book3 = new Book("Энциклопедия", "Семенов Р. М.", 2000, 22888);
         Book book4 = new Book("Фантастика", "Головачев В. В.", 2005, 12444);
 
+        Book book5 = new Book("Синяя книга");
+        Book book6 = new Book("Красная книга");
+        Book book7 = new Book("Зеленая книга");
+
         petrov.takeBook(book1);
         petrov.showBooks();
 
@@ -27,14 +31,20 @@ public class TestReader {
         petrov.takeBook(PetrovBooks);
         petrov.showBooks();
 
-        ivanov.takeBook(book4);
-        ivanov.showBooks();
+        petrov.takeBook("Фен-Шуй", "Изотерика");
+        petrov.showBooks();
 
-        IvanovBooks.add(book1);
-        IvanovBooks.add(book3);
+        petrov.takeBook(book5, book6, book7);
+        petrov.showBooks();
 
-        ivanov.takeBook(IvanovBooks);
-        ivanov.showBooks();
+//        ivanov.takeBook(book4);
+//        ivanov.showBooks();
+//
+//        IvanovBooks.add(book1);
+//        IvanovBooks.add(book3);
+//
+//        ivanov.takeBook(IvanovBooks);
+//        ivanov.showBooks();
 
     }
 

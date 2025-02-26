@@ -1,4 +1,4 @@
-package main.java.homework.oop.classes_homework.task_2;
+package homework.oop.classes_homework.task_2;
 
 public class Book {
 
@@ -12,6 +12,10 @@ public class Book {
         this.author = author;
         this.yearOfPublication = yearOfPublication;
         this.bookCode = bookCode;
+    }
+
+    public Book(String bookName) {
+        this.bookName = bookName;
     }
 
     public String getBookName() {

@@ -1,4 +1,4 @@
-package main.java.homework.oop.classes_homework.task_2;
+package homework.oop.classes_homework.task_2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,19 +27,37 @@ public class Reader {
         System.out.println(fio + " взял книгу: " + book.getBookName());
     }
 
-    public void takeBook(List<Book> takenBooks) {
-        int index = 0;
-        System.out.print(fio + " взял книги: ");
+    public void takeBook(String... bookNames) {
+        String titles = "";
+
+        for (String name : bookNames) {
+            takenBooks.add(new Book(name));
+            titles += name + ", ";
+        }
+
+        titles = titles.substring(0, titles.length() - 2);
+        System.out.printf("%s взял книги: %s\n", fio, titles);
+    }
+
+    public void takeBook(Book... takenBooks) {
+        String titles = "";
 
         for (Book book : takenBooks) {
             this.takenBooks.add(book);
-            System.out.print(book.getBookName());
-            index = takenBooks.indexOf(book);
-            // добавляй запятую ко всем названиям книг, кромке последней
-            if (!(index == takenBooks.size() - 1)) System.out.print(", ");
+            titles += book.getBookName() + ", ";
         }
 
-        System.out.println();
+        titles = titles.substring(0, titles.length() - 2);
+        System.out.printf("%s взял книги: %s\n", fio, titles);
+    }
+
+    public void takeBook(List<Book> takenBooks) {
+        String titles = "";
+        for (Book book : takenBooks) {
+            titles += book.getBookName() + ", ";
+        }
+        titles = titles.substring(0, titles.length() - 2);
+        System.out.printf("%s взял книги: %s", fio, titles);
     }
 
     public void returnBook(Book book) {
@@ -62,9 +80,9 @@ public class Reader {
         System.out.println();
     }
 
-    public  void showBooks() {
+    public void showBooks() {
         int index = 0;
-        System.out.print(fio + " имеет на руках след. книги: ");
+        System.out.printf("\n%s имеет на руках след. книги: ", fio);
 
         for (Book book : takenBooks) {
             System.out.print(book.getBookName());
