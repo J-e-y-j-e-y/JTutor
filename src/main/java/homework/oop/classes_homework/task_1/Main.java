@@ -1,4 +1,4 @@
-package main.java.homework.oop.classes_homework.task_1;
+package homework.oop.classes_homework.task_1;
 
 public class Main {
     public static void main(String[] args) {
