@@ -20,5 +20,7 @@ public class Main {
         }
         System.out.println("Должно быть " + aCounter + " объектов класса AClass");
         System.out.println("Должно быть " + bCounter + " объектов класса BClass");
+        System.out.println("Я посчитал у класса В объектов - " + BClass.bCounter);
+        System.out.println("Я посчитал у класса A объектов - " + AClass.aCounter);
     }
 }
