@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class FileLogger extends Logger {
     String fileName = "src/main/java/homework/oop/abstract_homework/task_1/log.txt"; // если не пишет в файл, проверь путь или подставь абсолютный
-    String messageFormat = "\n%1$tb %1$te, %1$tY %1$tI:%1$tM %1$Tp %s %s";
+
     BufferedWriter writer;
 
     public FileLogger() {
