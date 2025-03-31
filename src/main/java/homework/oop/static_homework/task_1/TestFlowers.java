@@ -23,6 +23,7 @@ public class TestFlowers {
         bouquet1.add(rose1);
         bouquet1.add(rose2);
         bouquet1.add(carnation1);
+        Bouquet bouquet_one = new Bouquet(bouquet1);
 
         List<Flower> bouquet2 = new ArrayList<>();
         bouquet2.add(tulip1);
@@ -30,6 +31,7 @@ public class TestFlowers {
         bouquet2.add(rose3);
         bouquet2.add(carnation3);
         bouquet2.add(carnation2);
+        Bouquet bouquet_two = new Bouquet(bouquet2);
 
         List<Flower> bouquet3 = new ArrayList<>();
         bouquet3.add(carnation1);
@@ -38,11 +40,12 @@ public class TestFlowers {
         bouquet3.add(tulip2);
         bouquet3.add(tulip3);
         bouquet3.add(carnation3);
+        Bouquet bouquet_three = new Bouquet(bouquet3);
 
         // Считаем стоимость каждого букета
-        System.out.println("Стоимость букета 1: " + Flower.cost(bouquet1) + " руб.");
-        System.out.println("Стоимость букета 2: " + Flower.cost(bouquet2) + " руб.");
-        System.out.println("Стоимость букета 3: " + Flower.cost(bouquet3) + " руб.");
+        System.out.println("Стоимость букета 1: " + bouquet_one.cost() + " руб.");
+        System.out.println("Стоимость букета 2: " + bouquet_two.cost() + " руб.");
+        System.out.println("Стоимость букета 3: " + bouquet_three.cost() + " руб.");
 
         // Подсчитываем общее количество проданных цветов
         System.out.println("Общее количество проданных цветов: " + Flower.getNumberOfFlowersSold());

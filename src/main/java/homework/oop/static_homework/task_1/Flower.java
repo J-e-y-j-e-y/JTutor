@@ -16,19 +16,16 @@ public class Flower {
         this.pricePerPiece = pricePerPiece;
     }
 
-    // расчитываем стоимости букета и считаем количество проданных цветов
-    public static int cost(List<Flower> flowers) {
-        int bouquetCost = 0;
-        for (Flower flower : flowers) {
-            bouquetCost += flower.pricePerPiece;
-            // Увеличиваем количество проданных цветов
-            numberOfFlowersSold++;
-        }
-        return bouquetCost;
+    public int getPricePerPiece() {
+        return pricePerPiece;
     }
 
     public static int getNumberOfFlowersSold() {
         return numberOfFlowersSold;
+    }
+
+    public static void increaseSoldFlowersCount() {
+        numberOfFlowersSold++;
     }
 
 }
