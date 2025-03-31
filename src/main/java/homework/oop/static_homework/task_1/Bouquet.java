@@ -12,6 +12,7 @@ public class Bouquet {
     public int cost() {
         int bouquetCost = 0;
         for (Flower flower : bouquet) {
+            // Рассчитываем стоимость букета
             bouquetCost += flower.getPricePerPiece();
             // Увеличиваем количество проданных цветов
             Flower.increaseSoldFlowersCount();
