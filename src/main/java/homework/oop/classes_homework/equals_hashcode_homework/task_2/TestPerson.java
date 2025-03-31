@@ -2,9 +2,11 @@ package homework.oop.classes_homework.equals_hashcode_homework.task_2;
 
 public class TestPerson {
     public static void main(String[] args) {
-        Adress adress1 = new Adress("Дзержинского", "Енакиево", "350450");
+        String s1 = "Дзержинского";
+        String s2 = new String("дзержинского");
+        Adress adress1 = new Adress(s1, "Енакиево", "350450");
         Adress adress2 = new Adress("Интернациональная", "Горловка", "324350");
-        Adress adress3 = new Adress("Дзержинского", "Енакиево", "350450");
+        Adress adress3 = new Adress(s2, "Енакиево", "350450");
 
         Person person1 = new Person("Petr", "Petrov", adress1);
         Person person2 = new Person("Ivan", "Ivanov", adress2);

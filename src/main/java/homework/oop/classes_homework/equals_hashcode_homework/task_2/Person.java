@@ -17,7 +17,7 @@ public class Person {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return firstName == person.firstName && lastName == person.lastName && adress.equals(person.adress);
+        return Objects.equals(firstName, person.firstName) && Objects.equals(lastName, person.lastName) && Objects.equals(adress, person.adress);
     }
 
     @Override

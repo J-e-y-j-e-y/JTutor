@@ -17,7 +17,7 @@ public class Adress {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Adress adress = (Adress) o;
-        return street == adress.street && city == adress.city && zipCode == adress.zipCode;
+        return Objects.equals(street, adress.street) && Objects.equals(city, adress.city) && Objects.equals(zipCode, adress.zipCode);
     }
 
     @Override
