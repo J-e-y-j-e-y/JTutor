@@ -1,10 +1,11 @@
 package homework.oop.nested_classes_homework.local_classes_homework.task_2;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Category {
     private String name;
-    private List<Category> subCategories;
+    private List<Category> subCategories = new ArrayList<>();
 
     public Category(String name) {
         this.name = name;
@@ -18,8 +19,16 @@ public class Category {
         public void processTree(Category rootCategory) {
             class CategoryProcessor {
                 void processCategory(Category category) {
-                    System.out.printf("Категория - %s", name);
+                    System.out.printf("Категория - %s\n", category.name);
                 }
+            }
+
+            CategoryProcessor cp = new CategoryProcessor();
+            cp.processCategory(rootCategory);
+
+            for (Category cat : rootCategory.subCategories) {
+                cp.processCategory(cat);
+                processTree(cat);
             }
         }
     }
