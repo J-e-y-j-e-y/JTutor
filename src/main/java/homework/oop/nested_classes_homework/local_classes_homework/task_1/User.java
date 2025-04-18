@@ -11,8 +11,6 @@ public class User {
 
     public void createQuery() {
         class Query  {
-            final
-
             public void printToLog() {
                 System.out.printf("Пользователь с логином %s отправил запрос", login);
             }
