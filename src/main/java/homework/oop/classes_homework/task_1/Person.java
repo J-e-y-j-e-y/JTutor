@@ -16,14 +16,11 @@ public class Person {
     // Можно ли складывать число и строку без явного приведения типов?
     @Override
     public String toString() {
-        return "Person{" +
-                "fullName='" + fullName + '\'' +
-                ", age=" + age +
-                '}';
+        return "Person{" + "fullName='" + fullName + '\'' + ", age=" + age + '}';
     }
 
     public void move() {
-        System.out.println(toString() + " идет");
+        System.out.println(this + " идет");
     }
 
     public void talk() {
