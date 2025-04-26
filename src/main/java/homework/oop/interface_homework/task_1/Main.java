@@ -5,16 +5,19 @@ public class Main {
         double temperature = 23.5;
 
         // раскомментируй и сделай так, чтобы работало
-/*        System.out.println("t = " +
+        System.out.println("t = " +
                 new CelsiusConverter().convert(temperature));
         System.out.println("t = " +
                 new KelvinConverter().convert(temperature));
         System.out.println("t = " +
-                new FahrenheitConverter().convert(temperature));*/
+                new FahrenheitConverter().convert(temperature));
 
         // дополнительно
-        /*FahrenheitConverter fahrenheitConverter = Converter.getInstance(Degree.FAHRENHEIT);
+        Converter fahrenheitConverter = Converter.getInstance(Degree.FAHRENHEIT);
         System.out.println("t = " +
-                fahrenheitConverter.convert(temperature));*/
+                fahrenheitConverter.convert(temperature));
+
+
+        }
     }
-}
+
