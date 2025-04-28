@@ -17,7 +17,7 @@ public class MainWindow extends JFrame {
 
 
         // a button with both text and icon
-        JButton button2 = new JButton("Start");
+        JButton button2 = new JButton("Exit");
         add(button2);
 
         // add event listener - recommended way
@@ -26,6 +26,13 @@ public class MainWindow extends JFrame {
             public void actionPerformed(ActionEvent evt) {
                 // delegate to event handler method
                 buttonActionPerformed(evt);
+            }
+        });
+
+        button2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
             }
         });
 
