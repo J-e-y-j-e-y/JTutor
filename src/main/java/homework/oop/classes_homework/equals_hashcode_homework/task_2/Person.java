@@ -13,6 +13,10 @@ public class Person {
         this.firstName = firstName;
     }
 
+    public String getLastName() {
+        return lastName;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
@@ -24,4 +28,6 @@ public class Person {
     public int hashCode() {
         return Objects.hash(firstName, lastName, address);
     }
+
+
 }
