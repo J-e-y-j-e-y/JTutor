@@ -10,7 +10,7 @@ public class MainBattle {
     static int redScore = 0;
 
     public static void main(String[] args) {
-        /*Random random = new Random();
+        Random random = new Random();
 
         List<AbstractRobot> greenTeam = new ArrayList<>();
         String greenTeamFlag = "GREEN";
@@ -45,7 +45,7 @@ public class MainBattle {
             System.out.println("GREEN team выиграли");
         } else if (redScore > greenScore) {
             System.out.println("RED team выиграли");
-        } else System.out.println("Победила дружба :)");*/
+        } else System.out.println("Победила дружба :)");
     }
 
     public static void duel(AbstractRobot robotFirst, AbstractRobot robotSecond) {
