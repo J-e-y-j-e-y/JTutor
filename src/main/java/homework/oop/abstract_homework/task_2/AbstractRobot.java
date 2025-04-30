@@ -15,6 +15,9 @@ public class AbstractRobot {
     }
 
     public BodyPart attack() {
+        if (!(this instanceof Attackable)) {
+            return null;
+        }
         BodyPart attackedBodyPart = null;
         hitCount = random.nextInt(4) + 1;
 
@@ -31,6 +34,9 @@ public class AbstractRobot {
     }
 
     public BodyPart defense() {
+        if (!(this instanceof Defensable)) {
+            return null;
+        }
         BodyPart defencedBodyPart = null;
         hitCount = random.nextInt(4) + 1;
 
@@ -46,7 +52,7 @@ public class AbstractRobot {
         return defencedBodyPart;
     }
 
-    public Object getName() {
+    public String getName() {
         return name;
     }
 
