@@ -25,7 +25,16 @@ public class MainWindow extends JFrame {
             @Override
             public void actionPerformed(ActionEvent evt) {
                 // delegate to event handler method
-                buttonActionPerformed(evt);
+                String buttonTitle = button1.getText();
+                buttonActionPerformed(evt, buttonTitle);
+            }
+        });
+
+        button2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+                String buttonTitle = button2.getText();
+                buttonActionPerformed(evt, buttonTitle);
             }
         });
 
@@ -41,8 +50,8 @@ public class MainWindow extends JFrame {
         setLocationRelativeTo(null);
     }
 
-    private void buttonActionPerformed(ActionEvent evt) {
-        JOptionPane.showMessageDialog(MainWindow.this, "Button #1 is clicked!");
+    private void buttonActionPerformed(ActionEvent evt, String title) {
+        JOptionPane.showMessageDialog(MainWindow.this, title + " is clicked!");
     }
 
     public static void main(String[] args) {
